@@ -1,0 +1,40 @@
+{
+  "name": "flex-polyfill",
+  "version": "1.0.0",
+  "description": "A JavaScript polyfill for Flexbox",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "build": "gulp build",
+    "compile": "gulp publish"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015-script": "^1.1.0",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-zipmd5": "^1.0.0",
+    "gulp-babel": "^7.0.0",
+    "gulp-minify": "^2.1.0",
+    "gulp-rollup": "^2.15.0",
+    "gulp-sequence": "^0.4.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/fulme/flex-polyfill.git"
+  },
+  "keywords": [
+    "flex",
+    "flexbox",
+    "css3",
+    "polyfill"
+  ],
+  "author": "fulme",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fulme/flex-polyfill/issues"
+  },
+  "homepage": "https://github.com/fulme/flex-polyfill#readme"
+}
