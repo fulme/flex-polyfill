@@ -37,7 +37,6 @@
 
   // or cmd
   // let flexPolyfill = require('flex-polyfill');
-  
   flexPolyfill(options);
 ```
 
@@ -45,6 +44,7 @@
 ```html
   <script src="./dist/index.min.js"></script>
 ```
+
 ```js
   window.flexPolyfill(options);
 ```
@@ -60,3 +60,6 @@
     flexPolyfill(options);
   });
 ```
+
+# 支持程度及已知问题
+[详情](https://github.com/jonathantneal/flexibility/blob/master/SUPPORT.md)
