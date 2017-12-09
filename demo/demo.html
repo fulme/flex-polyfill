@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <title>Flexibility</title>
+  <meta charset="utf-8">
+  <link href="demo.css" rel="stylesheet">
+</head>
+
+<body>
+<h1>Flexibility</h1>
+
+<p class="controls">
+  <label class="control">align-items <select name="align-items"><option>flex-start</option><option>flex-end</option><option>center</option><option selected>stretch</option></select></label>
+  <label class="control">flex-direction <select name="flex-direction"><option selected>row</option><option>row-reverse</option><option>column</option><option>column-reverse</option></select></label>
+  <label class="control">flex-wrap <select name="flex-wrap"><option>nowrap</option><option selected>wrap</option></select></label>
+  <label class="control">justify-content <select name="justify-content"><option selected>flex-start</option><option>flex-end</option><option>center</option><option>space-between</option><option>space-around</option></select></label>
+</p>
+
+<div class="flex w-border" id="demo">
+  <div class="item w-margin w-border w-padding"><div class="box-1"></div></div>
+  <div class="item w-margin w-border w-padding"><div class="box-2"></div></div>
+  <div class="item w-margin w-border w-padding"><div class="box-3"></div></div>
+  <div class="item w-margin w-border w-padding"><div class="box-4"></div></div>
+  <div class="item w-margin w-border w-padding"><div class="box-5"></div></div>
+  <div class="item w-margin w-border w-padding"><div class="box-6"></div></div>
+  <div class="item w-margin w-border w-padding"><div class="box-1"></div></div>
+  <div class="item w-margin w-border w-padding"><div class="box-2"></div></div>
+  <div class="item w-margin w-border w-padding"><div class="box-3"></div></div>
+  <div class="item w-margin w-border w-padding"><div class="box-4"></div></div>
+  <div class="item w-margin w-border w-padding"><div class="box-5"></div></div>
+  <div class="item w-margin w-border w-padding"><div class="box-6"></div></div>
+</div>
+
+<!--<script src="../dist/lib/flexibility.js"></script>-->
+<script src="../dist/index.min.js"></script>
+<script src="demo.js"></script>
+</body>
+</html>

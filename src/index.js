@@ -1,15 +1,39 @@
-import onresizeListener from './utils/onresize';
-import loadScript from './utils/loadScript';
-
+let loaded = false;
 const OPTIONS = {
   elem: null,
-  src: '//j1.58cdn.com.cn/git/flex-polyfill/lib/flexibility.js'
+  src: 'http://j1.58cdn.com.cn/git/flex-polyfill/lib/flexibility.js'
 };
 
+/**
+ * 检测浏览器是否支持flex布局
+ * @returns {boolean}
+ */
 function supportsFlexBox() {
-  let test = document.createElement('test');
-  test.style.display = 'flex';
-  return test.style.display === 'flex';
+  try {
+    let test = document.createElement('test');
+    test.style.display = 'flex';
+    return test.style.display === 'flex';
+  } catch (e) {
+    return false;
+  }
+}
+/**
+ * 动态加载脚本
+ * @param {string} src
+ * @param {boolean} async
+ */
+function loadScript(src, async) {
+  let script = document.createElement('script');
+  script.src = src;
+
+  if (async) {
+    script.setAttribute('async', 'async');
+    script.setAttribute('defer', 'defer');
+  } else {
+    script.setAttribute('async', 'false');
+  }
+
+  document.body.appendChild(script);
 }
 
 /**
@@ -21,13 +45,16 @@ export default function(options = OPTIONS) {
     // Modern Flexbox is supported
   } else {
     options.elem = options.elem || document.documentElement;
-    options.src = options.elem || OPTIONS.src;
+    options.src = options.src || OPTIONS.src;
 
     try {
-      loadScript(src);
-      window.flexibility(elem);
-      onresizeListener(() => {
-        window.flexibility(elem);
+      if (!loaded && !window.flexibility) {
+        loaded = true;
+        loadScript(options.src);
+      }
+
+      window.flexibility.onresize({
+        target: options.elem
       });
     } catch(e){
       // TODO report
