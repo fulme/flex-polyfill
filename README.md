@@ -34,9 +34,10 @@
 ```js
   // es6
   import flexPolyfill from 'flex-polyfill';
-
-  // or cmd
-  // let flexPolyfill = require('flex-polyfill');
+```
+```js
+  // cmd
+  let flexPolyfill = require('flex-polyfill');
   flexPolyfill(options);
 ```
 
@@ -44,7 +45,6 @@
 ```html
   <script src="./dist/index.min.js"></script>
 ```
-
 ```js
   window.flexPolyfill(options);
 ```
@@ -53,9 +53,10 @@
 ```js
   // CMD
   let flexPolyfill = require('./dist/index.min');
-  flexPolyfill(options);    
-
-  // or AMD
+  flexPolyfill(options);
+```
+```js
+  // AMD
   requirejs(['./dist/index.min'], function(flexPolyfill) {
     flexPolyfill(options);
   });
