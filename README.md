@@ -1,7 +1,7 @@
 # flex-polyfill
 > flex布局的兼容方案，对[flexibility](https://github.com/jonathantneal/flexibility)的封装。
 
-相对于直接接入`flexibility`，这里做了动态按需加载以及多种接入方式的支持。
+相对于直接接入`flexibility`，这里做了动态按需加载以及多种接入方式的支持。  
 后续使用过程中如果有什么问题，方便统一升级或回滚处理。
 
 # CSS写法
@@ -65,4 +65,5 @@
 # 注意事项
 - `flex`仅支持`flex-grow`
 - `align-items: stretch`的情况下，`flex-direction`从`row`切换到`column`可能会失败
+
 尽量避免使用复杂的特性组合，此方案不能完备地支持标准的全部内容，[支持情况](https://github.com/jonathantneal/flexibility/blob/master/SUPPORT.md)。
