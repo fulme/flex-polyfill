@@ -1,7 +1,7 @@
 let loaded = false;
 const OPTIONS = {
   elem: null,
-  src: 'http://j1.58cdn.com.cn/git/flex-polyfill/lib/flexibility.js'
+  src: '//j1.58cdn.com.cn/git/flex-polyfill/lib/flexibility.js'
 };
 
 /**

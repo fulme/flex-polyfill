@@ -62,6 +62,7 @@
   });
 ```
 
-# 支持程度及已知问题
-尽量避免使用复杂的特性组合，此方案不能完备地支持标准的全部内容。
-[详情](https://github.com/jonathantneal/flexibility/blob/master/SUPPORT.md)
+# 注意事项
+- `flex`仅支持`flex-grow`
+- `align-items: stretch`的情况下，`flex-direction`从`row`切换到`column`可能会失败
+尽量避免使用复杂的特性组合，此方案不能完备地支持标准的全部内容，[支持情况](https://github.com/jonathantneal/flexibility/blob/master/SUPPORT.md)。

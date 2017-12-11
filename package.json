@@ -1,6 +1,6 @@
 {
   "name": "flex-polyfill",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A JavaScript polyfill for Flexbox",
   "main": "lib/index.js",
   "directories": {
